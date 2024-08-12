@@ -3,16 +3,34 @@ const nextConfig = {
     async rewrites() {
       return [
         {
-          source: '/career/:slug',
-          destination: 'https://career.example.agus.stiawan.site/:slug',
+          source: '/:slug',
+          destination: '/career/:slug',
+          has: [
+            {
+              type: 'host',
+              value: 'career.example.agus.stiawan.site',
+            },
+          ],
         },
         {
-          source: '/career',
-          destination: 'https://career.example.agus.stiawan.site',
+          source: '/',
+          destination: '/career',
+          has: [
+            {
+              type: 'host',
+              value: 'career.example.agus.stiawan.site',
+            },
+          ],
         },
         {
           source: '/:path*',
-          destination: 'https://example.agus.stiawan.site/:path*',
+          destination: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'example.agus.stiawan.site',
+            },
+          ],
         },
       ]
     }
