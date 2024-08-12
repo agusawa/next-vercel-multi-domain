@@ -6,10 +6,10 @@ export function middleware(request: NextRequest) {
 
   // Handle requests to career.example.agus.stiawan.site
   if (hostname === "career.example.agus.stiawan.site") {
-    if (url.pathname === "/") {
-      url.pathname = "/career";
-      return NextResponse.rewrite(url);
-    }
+    // if (url.pathname === "/") {
+    //   url.pathname = "/career";
+    //   return NextResponse.rewrite(url);
+    // }
 
     // if (!url.pathname.startsWith('/career')) {
     //   url.pathname = `/career${url.pathname}`;
