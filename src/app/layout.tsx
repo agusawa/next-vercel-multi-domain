@@ -27,7 +27,7 @@ export default function RootLayout({
               <Link href="/contact-us" className="underline">Contact Us</Link>
             </li>
             <li>
-              <Link href="/about-us" className="underline">Contact Us</Link>
+              <Link href="/about-us" className="underline">About Us</Link>
             </li>
             <li>
               <Link href="/career" className="underline">Career</Link>
