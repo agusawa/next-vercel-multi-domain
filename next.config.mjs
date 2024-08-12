@@ -4,8 +4,8 @@ const nextConfig = {
       return {
         beforeFiles: [
           {
-            source: '/',
-            destination: '/career',
+            source: '/:path*',
+            destination: '/career/:path*',
             has: [
               {
                 type: 'host',
@@ -14,8 +14,8 @@ const nextConfig = {
             ],
           },
           {
-            source: '/:path*',
-            destination: '/career/:path*',
+            source: '/',
+            destination: '/career',
             has: [
               {
                 type: 'host',
