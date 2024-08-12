@@ -3,13 +3,22 @@ const nextConfig = {
     async rewrites() {
       return [
         {
+          source: '/',
+          destination: '/career',
+          has: [
+            {
+              type: 'host',
+              value: 'career.example.agus.stiawan.site',
+            },
+          ],
+        },
+        {
           source: '/:path*',
           destination: '/career/:path*',
           has: [
             {
               type: 'host',
               value: 'career.example.agus.stiawan.site',
-
             },
           ],
         },
