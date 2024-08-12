@@ -21,16 +21,16 @@ export default function RootLayout({
         <nav>
           <ul className="flex items-center space-x-5">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" className="underline">Home</Link>
             </li>
             <li>
-              <Link href="/contact-us">Contact Us</Link>
+              <Link href="/contact-us" className="underline">Contact Us</Link>
             </li>
             <li>
-              <Link href="/about-us">Contact Us</Link>
+              <Link href="/about-us" className="underline">Contact Us</Link>
             </li>
             <li>
-              <Link href="/career">Career</Link>
+              <Link href="/career" className="underline">Career</Link>
             </li>
           </ul>
         </nav>
