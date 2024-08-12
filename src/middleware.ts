@@ -11,10 +11,10 @@ export function middleware(request: NextRequest) {
       return NextResponse.rewrite(url);
     }
 
-    if (!url.pathname.startsWith('/career')) {
-      url.pathname = `/career${url.pathname}`;
-      return NextResponse.rewrite(url);
-    }
+    // if (!url.pathname.startsWith('/career')) {
+    //   url.pathname = `/career${url.pathname}`;
+    //   return NextResponse.rewrite(url);
+    // }
   }
 
   // Handle requests to example.agus.stiawan.site
