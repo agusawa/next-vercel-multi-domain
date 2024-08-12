@@ -11,8 +11,10 @@ export function middleware(request: NextRequest) {
       return NextResponse.rewrite(url);
     }
 
-    // url.pathname = `/career${url.pathname}`;
-    // return NextResponse.rewrite(url);
+    if (!url.pathname.startsWith('/career')) {
+      url.pathname = `/career${url.pathname}`;
+      return NextResponse.rewrite(url);
+    }
   }
 
   // Handle requests to example.agus.stiawan.site
@@ -27,13 +29,6 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(newUrl);
     }
   }
-
-  // Handle requests to career.example.agus.stiawan.site
-  // if (hostname === "career.example.agus.stiawan.site") {
-  //   if (!url.pathname.startsWith("/career")) {
-  //     return NextResponse.redirect("https://example.agus.stiawan.site");
-  //   }
-  // }
 
   // Allow requests that match the correct domain and path
   return NextResponse.next();
