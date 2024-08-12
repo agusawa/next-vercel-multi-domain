@@ -1,3 +1,4 @@
+import { DOMAIN_CAREER } from "@/configs/domain.config";
 import Link from "next/link";
 
 export default function Page() {
@@ -6,13 +7,19 @@ export default function Page() {
       <h1>Career Page</h1>
       <ul>
         <li>
-          <Link href="/career/developer" className="underline">Developer</Link>
-        </li> 
-        <li>
-          <Link href="/career/designer" className="underline">Designer</Link>
+          <Link href={`${DOMAIN_CAREER}/developer`} className="underline">
+            Developer
+          </Link>
         </li>
         <li>
-          <Link href="/career/manager" className="underline">Manager</Link>
+          <Link href={`${DOMAIN_CAREER}/designer`} className="underline">
+            Designer
+          </Link>
+        </li>
+        <li>
+          <Link href={`${DOMAIN_CAREER}/manager`} className="underline">
+            Manager
+          </Link>
         </li>
       </ul>
     </main>

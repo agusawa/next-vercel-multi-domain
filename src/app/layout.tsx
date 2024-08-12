@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { DOMAIN_CAREER, DOMAIN_PRIMARY } from "@/configs/domain.config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,16 +22,16 @@ export default function RootLayout({
         <nav>
           <ul className="flex items-center space-x-5">
             <li>
-              <Link href="/" className="underline">Home</Link>
+              <Link href={DOMAIN_PRIMARY} className="underline">Home</Link>
             </li>
             <li>
-              <Link href="/contact-us" className="underline">Contact Us</Link>
+              <Link href={`${DOMAIN_PRIMARY}/contact-us`} className="underline">Contact Us</Link>
             </li>
             <li>
-              <Link href="/about-us" className="underline">About Us</Link>
+              <Link href={`${DOMAIN_PRIMARY}/about-us`} className="underline">About Us</Link>
             </li>
             <li>
-              <Link href="/career" className="underline">Career</Link>
+              <Link href={DOMAIN_CAREER} className="underline">Career</Link>
             </li>
           </ul>
         </nav>
